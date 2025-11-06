@@ -1,180 +1,160 @@
-# RAG Workshop - Complete Setup Guide
+# Advanced RAG Workshop - Implementation Complete ✅
 
-## ✅ Installation Complete!
-
-Your environment has been successfully set up with **241 packages** including PyTorch with CUDA support!
-
-## Quick Start
-
-```bash
-# 1. Sync dependencies (creates venv and installs packages)
-uv sync
-
-# 2. Activate virtual environment
-source .venv/bin/activate  # Linux/macOS
-# or
-.venv\Scripts\activate  # Windows
-
-# 3. Configure Azure OpenAI
-cp .env.example .env
-nano .env  # Add your credentials
-
-# 4. Start Jupyter
-jupyter notebook
-```
-
-## What's Installed
-
-### Core Framework
-- **LlamaIndex 0.14.5** - Complete RAG framework
-- **PyTorch 2.9.0+cu128** - Deep learning with CUDA support ✅
-- **Sentence Transformers 5.1.1** - Embeddings & cross-encoders
-- **RAGAS 0.3.7** - RAG evaluation metrics
-
-### Azure Integration
-- `llama-index-llms-azure-openai` - Azure OpenAI LLM
-- `llama-index-embeddings-azure-openai` - Azure embeddings
-
-### Advanced Features
-- `llama-index-retrievers-bm25` - Keyword search
-- `duckduckgo-search` - Web search
-- `arxiv` - Academic paper search
-- `datasets` - Dataset management
-
-### Data & Visualization
-- `pandas`, `numpy` - Data analysis
-- `matplotlib` - Plotting
-- `jupyter`, `jupyterlab` - Interactive notebooks
-
-## Environment Configuration
-
-Create a `.env` file with your Azure OpenAI credentials:
-
-```env
-AZURE_OPENAI_API_KEY=your_key_here
-AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
-AZURE_OPENAI_API_VERSION=2024-02-15-preview
-AZURE_OPENAI_DEPLOYMENT_NAME=gpt-4
-AZURE_OPENAI_EMBEDDING_DEPLOYMENT=text-embedding-ada-002
-```
-
-## Workshop Demos
-
-Navigate to `RAG_hf_v4/` for 10 advanced RAG demos:
-
-1. **demo_01** - HyDE Query Enhancement
-2. **demo_02** - Multi-Query Decomposition
-3. **demo_03** - Hybrid Search (Semantic + BM25)
-4. **demo_04** - Hierarchical Retrieval
-5. **demo_05** - Cross-Encoder Reranking
-6. **demo_06** - Context Compression
-7. **demo_07** - Corrective RAG
-8. **demo_08** - Agentic RAG
-9. **demo_09** - Embedding Fine-Tuning
-10. **demo_10** - RAG Evaluation
-
-## Verify Installation
-
-```bash
-source .venv/bin/activate
-python -c "
-import torch
-from llama_index.llms.azure_openai import AzureOpenAI
-print('✅ Installation verified!')
-print(f'CUDA available: {torch.cuda.is_available()}')
-"
-```
-
-## Common Commands
-
-```bash
-# Sync/update all dependencies
-uv sync
-
-# Add a new package
-uv pip install package-name
-
-# List installed packages
-uv pip list
-
-# Start Jupyter Notebook
-jupyter notebook
-
-# Start JupyterLab
-jupyter lab
-
-# Deactivate environment
-deactivate
-```
-
-## Troubleshooting
-
-### Import Errors
-Make sure the virtual environment is activated:
-```bash
-source .venv/bin/activate
-which python  # Should show: .venv/bin/python
-```
-
-### CUDA Not Available
-If you need CPU-only PyTorch:
-```bash
-uv pip uninstall torch
-uv pip install torch --index-url https://download.pytorch.org/whl/cpu
-```
-
-### Azure OpenAI Connection
-- Verify `.env` file has correct credentials
-- Check endpoint URL includes trailing slash
-- Ensure deployment names match your Azure resource
-
-## Project Structure
-
-```
-RAG-Workshop/
-├── pyproject.toml              # Dependencies
-├── .env.example                # Environment template
-├── .venv/                      # Virtual environment
-├── setup.sh / setup.bat        # Automated setup
-├── RAG_hf_v4/                  # Workshop notebooks
-│   ├── demo_01_*.ipynb
-│   ├── demo_02_*.ipynb
-│   └── ...
-└── RAG_v2/data/                # Sample documents
-```
-
-## Documentation
-
-- **INSTALLATION_SUCCESS.md** - Detailed installation report
-- **QUICKSTART.md** - Ultra-fast start guide
-- **SETUP.md** - Complete setup instructions
-- **UV_REFERENCE.md** - UV command reference
-
-## Why UV?
-
-- ⚡ **10-100x faster** than pip
-- 🔒 **Deterministic** dependency resolution
-- 💾 **Efficient** shared package cache
-- 🎯 **Compatible** drop-in replacement for pip
-
-## System Requirements
-
-- **Python**: 3.10+ (currently using 3.13.3)
-- **Disk Space**: ~4GB for all packages
-- **RAM**: 4-8GB recommended (for models)
-- **GPU**: Optional but recommended (CUDA detected ✅)
-
-## Getting Help
-
-1. Check documentation files (SETUP.md, QUICKSTART.md)
-2. Review individual notebook cells for package usage
-3. Verify environment activation: `which python`
-4. Check `.env` file for correct Azure credentials
-
-## License
-
-MIT License - See individual packages for their licenses.
+**Status:** All 11 demos implemented and ready for workshop delivery  
+**Completion Date:** October 16, 2025  
+**Framework:** LlamaIndex + Azure OpenAI
 
 ---
 
-**Ready to build advanced RAG systems? Start with `uv sync` and explore the demos! 🚀**
+## Quick Start
+
+### Prerequisites
+- Python environment with `uv` package manager
+- Azure OpenAI API credentials (GPT-4 and text-embedding-ada-002)
+- Environment variables configured:
+  - `AZURE_OPENAI_API_KEY`
+  - `AZURE_OPENAI_ENDPOINT`
+
+### Running the Demos
+
+Each demo is a self-contained Jupyter notebook. Execute them in order for the best learning experience:
+
+```bash
+# Navigate to the workshop directory
+cd RAG_graph_v5
+
+# Open a demo in Jupyter
+jupyter notebook demo_01_hyde_query_enhancement.ipynb
+```
+
+---
+
+## Demo Overview
+
+| # | Demo | File | Concepts | Status |
+|---|------|------|----------|--------|
+| 1 | HyDE Query Enhancement | `demo_01_hyde_query_enhancement.ipynb` | Hypothetical documents, semantic gap | ✅ |
+| 2 | Multi-Query Decomposition | `demo_02_multi_query_decomposition.ipynb` | RAG-Fusion, RRF algorithm | ✅ |
+| 3 | Hybrid Search | `demo_03_hybrid_search.ipynb` | Dense + Sparse retrieval, weighted fusion | ✅ |
+| 4 | Hierarchical Retrieval | `demo_04_hierarchical_retrieval.ipynb` | Sentence windows, chunking dilemma | ✅ |
+| 5 | Re-ranking with Cross-Encoders | `demo_05_reranking_cross_encoders.ipynb` | Two-pass retrieval, precision optimization | ✅ |
+| 6 | Context Compression | `demo_06_context_compression.ipynb` | Token optimization, information distillation | ✅ |
+| 7 | Corrective RAG | `demo_07_corrective_rag.ipynb` | Self-reflection, adaptive routing | ✅ |
+| 8 | Self-RAG | `demo_08_self_rag.ipynb` | Reflection tokens, meta-reasoning | ✅ |
+| 9 | Agentic RAG | `demo_09_agentic_rag.ipynb` | ReAct framework, multi-source synthesis | ✅ |
+| 10 | GraphRAG | `demo_10_graphrag.ipynb` | Knowledge graphs, multi-hop reasoning | ✅ |
+| 11 | RAG Evaluation | `demo_11_rag_evaluation.ipynb` | 5 core metrics, automated testing | ✅ |
+
+---
+
+## Workshop Structure
+
+### Phase 1: Pre-Retrieval Optimization (Demos 1-3)
+**Duration:** ~2 hours  
+**Focus:** Query transformation and hybrid search strategies
+
+Learn how to:
+- Bridge the semantic gap with HyDE
+- Increase recall with query decomposition
+- Combine dense and sparse retrieval
+
+### Phase 2: Post-Retrieval Refinement (Demos 4-6)
+**Duration:** ~2 hours  
+**Focus:** Context optimization and quality enhancement
+
+Learn how to:
+- Separate retrieval granularity from generation context
+- Re-rank with cross-encoders for precision
+- Compress context while preserving information
+
+### Phase 3: Adaptive Systems (Demos 7-8)
+**Duration:** ~2 hours  
+**Focus:** Self-reflective and corrective mechanisms
+
+Learn how to:
+- Build self-correcting RAG systems
+- Implement adaptive retrieval decisions
+- Use reflection tokens for meta-reasoning
+
+### Phase 4: Advanced Architectures & Evaluation (Demos 9-11)
+**Duration:** ~2 hours  
+**Focus:** Complex systems and production practices
+
+Learn how to:
+- Route queries across heterogeneous data sources
+- Leverage knowledge graphs for multi-hop reasoning
+- Evaluate and monitor RAG systems in production
+
+---
+
+## File Structure
+
+```
+RAG_demo/
+├── README.md                                    # This file
+├── WORKSHOP_COMPLETION_SUMMARY.md               # Detailed completion report
+├── workshop_demo_plan.md                        # Technical implementation plan
+│
+├── demo_01_hyde_query_enhancement.ipynb         # HyDE implementation
+├── demo_02_multi_query_decomposition.ipynb      # RAG-Fusion implementation
+├── demo_03_hybrid_search.ipynb                  # Dense + Sparse retrieval
+├── demo_04_hierarchical_retrieval.ipynb         # Sentence Window Retrieval
+├── demo_05_reranking_cross_encoders.ipynb       # Two-pass re-ranking
+├── demo_06_context_compression.ipynb            # Context optimization
+├── demo_07_corrective_rag.ipynb                 # Self-reflective retrieval
+├── demo_08_self_rag.ipynb                       # Reflection tokens
+├── demo_09_agentic_rag.ipynb                    # ReAct agents
+├── demo_10_graphrag.ipynb                       # Knowledge Graph RAG
+├── demo_11_rag_evaluation.ipynb                 # Evaluation framework
+│
+└── data/                                        # Demo datasets
+    ├── ml_concepts/                             # Machine learning documents
+    ├── tech_docs/                               # Technical documentation
+    ├── long_form_docs/                          # Long-form articles
+    └── finance_docs/                            # Business documents
+```
+
+---
+
+## Technical Stack
+
+- **Framework:** LlamaIndex (llama-index-core)
+- **LLM:** Azure OpenAI GPT-4
+- **Embeddings:** Azure OpenAI text-embedding-ada-002
+- **Re-ranking:** sentence-transformers (ms-marco-MiniLM-L-6-v2)
+- **Graph Processing:** NetworkX
+- **Data Analysis:** pandas, numpy, scikit-learn
+
+---
+
+
+
+## Troubleshooting
+
+### Common Issues
+
+**Issue:** Azure OpenAI authentication error  
+**Solution:** Verify environment variables are set:
+```bash
+echo $AZURE_OPENAI_API_KEY
+echo $AZURE_OPENAI_ENDPOINT
+```
+
+**Issue:** Missing dependencies  
+**Solution:** Install required packages:
+```bash
+pip install llama-index-core llama-index-llms-azure-openai llama-index-embeddings-azure-openai
+pip install llama-index-retrievers-bm25 sentence-transformers networkx
+```
+
+**Issue:** Data files not found  
+**Solution:** Ensure you're running notebooks from the `RAG_graph_v5` directory
+
+---
+
+## Citations and References
+
+All demos cite their source materials from:
+- Academic papers (e.g., Self-RAG - arXiv:2310.11511)
+- Industry best practices (Microsoft, Google Cloud, IBM)
+- Technical blogs (LangChain, Weights & Biases, Neo4j)
