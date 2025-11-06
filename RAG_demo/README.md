@@ -90,7 +90,7 @@ Learn how to:
 ## File Structure
 
 ```
-RAG_graph_v5/
+RAG_demo/
 ├── README.md                                    # This file
 ├── WORKSHOP_COMPLETION_SUMMARY.md               # Detailed completion report
 ├── workshop_demo_plan.md                        # Technical implementation plan
@@ -116,60 +116,6 @@ RAG_graph_v5/
 
 ---
 
-## Key Features
-
-### ✅ Comprehensive Coverage
-- All 11 advanced RAG techniques from the curriculum
-- Progressive complexity: foundational → advanced
-- Each demo isolated and self-contained
-
-### ✅ Production-Ready Code
-- Clean, well-commented implementations
-- LlamaIndex framework with Azure OpenAI
-- Reproducible results with seed setting
-
-### ✅ Pedagogical Excellence
-- Theoretical foundations before code
-- Baseline vs. advanced comparisons
-- Visual aids and quantitative metrics
-
-### ✅ Real-World Applicable
-- Best practices from industry research
-- Failure mode detection and correction
-- Evaluation and monitoring frameworks
-
----
-
-## Learning Outcomes
-
-After completing this workshop, participants will be able to:
-
-1. **Optimize Pre-Retrieval**
-   - Apply query transformation techniques (HyDE, decomposition)
-   - Understand when to use each technique
-
-2. **Enhance Retrieval Quality**
-   - Implement hybrid search (dense + sparse)
-   - Configure hierarchical retrieval strategies
-   - Apply cross-encoder re-ranking
-
-3. **Build Adaptive Systems**
-   - Create self-correcting RAG pipelines
-   - Implement reflection-based decision making
-   - Detect and mitigate failure modes
-
-4. **Deploy Advanced Architectures**
-   - Build agentic RAG with routing
-   - Integrate knowledge graphs for multi-hop reasoning
-   - Synthesize information from multiple sources
-
-5. **Ensure Production Quality**
-   - Evaluate RAG systems with 5 core metrics
-   - Set up automated testing pipelines
-   - Monitor for performance degradation
-
----
-
 ## Technical Stack
 
 - **Framework:** LlamaIndex (llama-index-core)
@@ -181,13 +127,7 @@ After completing this workshop, participants will be able to:
 
 ---
 
-## Documentation
 
-- **Implementation Plan:** `workshop_demo_plan.md` - Detailed technical specifications
-- **Completion Summary:** `WORKSHOP_COMPLETION_SUMMARY.md` - Full project report
-- **Curriculum Source:** `../Documents/AdvancedRAGWorkshop.md` - Theoretical foundation
-
----
 
 ## Troubleshooting
 
@@ -218,40 +158,3 @@ All demos cite their source materials from:
 - Academic papers (e.g., Self-RAG - arXiv:2310.11511)
 - Industry best practices (Microsoft, Google Cloud, IBM)
 - Technical blogs (LangChain, Weights & Biases, Neo4j)
-
-Full citation list available in `workshop_demo_plan.md`
-
----
-
-## Contributing
-
-This workshop is complete and ready for delivery. For updates or enhancements:
-
-1. Consult the curriculum: `../Documents/AdvancedRAGWorkshop.md`
-2. Update the demo notebook
-3. Update status in `workshop_demo_plan.md`
-4. Test thoroughly before delivery
-
----
-
-## License and Attribution
-
-**Developed for:** Advanced RAG Workshop  
-**Curriculum Source:** `Documents/AdvancedRAGWorkshop.md`  
-**Framework:** LlamaIndex with Azure OpenAI  
-**Completion:** October 16, 2025  
-
----
-
-## Contact and Support
-
-For questions or issues during the workshop:
-- Review the demo notebook's markdown cells for explanations
-- Consult `workshop_demo_plan.md` for implementation details
-- Check `WORKSHOP_COMPLETION_SUMMARY.md` for overview
-
----
-
-**🎯 Workshop Status: READY FOR DELIVERY**
-
-All 11 demos implemented, tested, and documented. The workshop provides a comprehensive journey from foundational techniques to production-grade advanced RAG systems.
